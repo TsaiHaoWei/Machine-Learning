@@ -22,4 +22,6 @@
   為了考量機器學習的樣本數，加入亂數初始球的座標位置，以及考量初始球移動的角度來增加，多樣性的樣本數。
   在rule base中，在回擊球後將托盤移動正中央，在球落下到一定高度時再去計算落下來的托盤位置。
 
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/edit/master/Hw3/Hw3_FMS.git) 
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_FMS.gif) 
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png)
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B.png)
