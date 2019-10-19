@@ -27,6 +27,5 @@
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
 ## Rule_Base簡易流程
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_%E6%B5%81%E7%A8%8B.png)
- 計算方式:
- 托盤位置 = 絕對值的球在距離托盤高度為200時的X-200
+
  
