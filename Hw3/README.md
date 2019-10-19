@@ -8,7 +8,7 @@
       (1)、球初始位置
       (2)、球速度調整
   # 分析
-  1、input 
+    1、input 
   
    球座標、磚塊座標、托盤座標
      
@@ -20,12 +20,12 @@
   
    效能FPS
    
- ## 設計
+ # 設計
   為了考量機器學習的樣本數，加入亂數初始球的座標位置，以及考量初始球移動的角度來增加，多樣性的樣本數。
   在rule base中，在回擊球後將托盤移動正中央，在球落下到一定高度時再去計算落下來的托盤位置。
-# KNN訓練架構圖
+## KNN訓練架構圖
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
-# Rule_Base簡易流程
+## Rule_Base簡易流程
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_%E6%B5%81%E7%A8%8B.png)
  計算方式:
  托盤位置 = 絕對值的球在距離托盤高度為200時的X-200
