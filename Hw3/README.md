@@ -1,22 +1,22 @@
-# Machine-Learning
+
   # 需求
-  1、Mechine_Learning過3關:能利用KNN過完三關
+  ## 1、Mechine_Learning過3關:能利用KNN過完三關
   
-  2、效能FPS:將效能調到一定高度(>=100)
+ ##  2、效能FPS:將效能調到一定高度(>=100)
   
-  3、機器學習樣本多樣化 
-      (1)、球初始位置
-      (2)、球速度調整
+##  3、機器學習樣本多樣化 
+  ### (1)、球初始位置
+   ###   (2)、球速度調整
   # 分析
-    1、input 
+   ## 1、input 
   
    球座標、磚塊座標、托盤座標
      
-  2、output 
+ ## 2、output 
   
    托盤移動
      
-  3、parameter 
+ ## 3、parameter 
   
    效能FPS
    
