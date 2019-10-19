@@ -29,3 +29,7 @@
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_%E6%B5%81%E7%A8%8B.png)
 ## KNN簡易流程
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_Knn%E6%B5%81%E7%A8%8B.png)
+## 球座標500Frame
+  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/%E7%90%83%E5%BA%A7%E6%A8%99.JPG)
+## 球座標500Frame
+  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/%E7%90%83%E5%BA%A7%E6%A8%991000Frame.JPG)
