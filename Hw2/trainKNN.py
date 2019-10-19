@@ -32,19 +32,23 @@ PlatX_next = PlatX[1:,:]
 instrust = (PlatX_next-PlatX[0:len(PlatX_next),0][:,np.newaxis])/5
 
 Ballarray = np.array(BallPosition[:-1])
+
 BallX_position = np.array(BallPosition)[:,0][:,np.newaxis]
 BallX_position_next = BallX_position[1:,:]
 Ball_Vx = BallX_position_next - BallX_position[0:len(BallX_position_next),0][:,np.newaxis]
+
 BallY_position = np.array(BallPosition)[:,1][:,np.newaxis]
 BallY_position_next = BallY_position[1:,:]
 Ball_Vy = BallY_position_next - BallY_position[0:len(BallY_position_next),0][:,np.newaxis]
-
 x = np.hstack((Ballarray,PlatX[0:-1,0][:,np.newaxis],Ball_Vx,Ball_Vy))
+print(len(PlatX[0:-1:0][:,np.newaxis]))
+print(x)
+
 y = instrust
 np.set_printoptions(threshold=np.inf)
 #--------------------------- train & test data
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.2,random_state = 100)
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.2,random_state = 41)
 #--------------------------- train model
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
