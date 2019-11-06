@@ -70,7 +70,7 @@ def ml_loop():
             # Do some stuff if needed
             # 3.2.1. Inform the game process that ml process is ready
 
-        if platform_center_y-ball_height>=120:
+        if platform_center_y-ball_height>=125:
             vx = ball_center #紀錄 在100 x是多少
             one_mx = mx
             record_vx = 1
@@ -81,17 +81,12 @@ def ml_loop():
             elif platform_center_x > 100:
                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
             pass
-
         else:  ##第一次回擊
 
             if platform_center_y-ball_height>=112:
                 vx = ball_center #紀錄 在100 x是多少
                 one_mx = mx
-                if platform_center_x < 100:
-                    comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                elif platform_center_x > 100:
-                    comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
-                pass
+
             if record_vx ==1:
                 if ball_position_history[-1][1] - ball_position_history[-2][1] >0:
                     up = platform_center_x
@@ -161,6 +156,7 @@ def ml_loop():
                         else:
                             if mx<0:
                                 print(test2)
+                                print(platform_center_x)
                                 test2 = 0
                                 test2_x = ball_center
                                 test2_y = platform_center_y-ball_height
@@ -172,9 +168,9 @@ def ml_loop():
                                             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                                     pass
                                 else:
-                                    if platform_center_x < (abs(vx-112)+100)/2:
+                                    if platform_center_x < (abs(vx-112)+70)/2:
                                             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                                    elif platform_center_x > (abs(vx-112)+100)/2:
+                                    elif platform_center_x > (abs(vx-112)+70)/2:
                                             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                                     pass
                             elif test2 == 0 :
@@ -228,9 +224,9 @@ def ml_loop():
                                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                                 pass
                             else:
-                                if platform_center_x <(300-abs(down + down_height-200))/2:
+                                if platform_center_x <(330-abs(down + down_height-200))/2:
                                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                                elif platform_center_x > (300-abs(down + down_height-200))/2:
+                                elif platform_center_x > (330-abs(down + down_height-200))/2:
                                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                                 pass
                         elif two_down==1:
@@ -255,7 +251,7 @@ def ml_loop():
                                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                                 pass
                     else:
-                        print("down_mx左")
+
                         if mx<0:
                             two_down1=1
                             new_downHeight1 = platform_center_y-ball_height
@@ -298,12 +294,12 @@ def ml_loop():
 
                 else: #回擊後上去
                     print("回擊後上去")
-                    print(up)
+                    print(up) #回擊後托盤X位置
+                    print(platform_center_x)
                     down = ball_center
 
                     down_height = platform_center_y-ball_height
                     down_mx = ball_position_history[-1][0] - ball_position_history[-2][0]
-                    print(down_mx)
                     newdown=ball_center
                     new_downHeight=platform_center_y-ball_height
                     newdown1=ball_center
@@ -316,9 +312,9 @@ def ml_loop():
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
                         else:
-                            if platform_center_x < 100:
+                            if platform_center_x < 70:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                            elif platform_center_x > 100:
+                            elif platform_center_x > 70:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
                     elif up < 40 :
@@ -329,22 +325,22 @@ def ml_loop():
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
                         else:
-                            if platform_center_x < 100:
+                            if platform_center_x < 130:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                            elif platform_center_x > 100:
+                            elif platform_center_x > 130:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
                     else:
                         if mx<0:
-                            if platform_center_x < 50:
+                            if platform_center_x < 70:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                            elif platform_center_x > 50:
+                            elif platform_center_x > 70:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
                         elif mx>0:
-                            if platform_center_x < 150:
+                            if platform_center_x < 130:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                            elif platform_center_x > 150:
+                            elif platform_center_x > 130:
                                 comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
                             pass
 
