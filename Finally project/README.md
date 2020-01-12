@@ -23,7 +23,8 @@
      
  ## 2、遊戲分析
    ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E9%81%8A%E6%88%B2%E5%88%86%E6%9E%901.png) 
-    紅色為1P，藍色為2P。
+
+   紅色為1P，藍色為2P。
     1P的Y座標為420，2P的Y座標為80
     物件速度:
     球速:(7,7)
@@ -34,7 +35,7 @@
 
      
  ## 3、遊戲參數
-    ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
+   ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
  ## 4、實現方法
    訓練方式:
         使用KNN(K-nearest neighbors algorithm)完成
@@ -49,13 +50,26 @@ KNN屬於機器學習中的監督式學習(Supervised learning)，但是在KNN�
 
 
  # 設計
-  為了考量機器學習的樣本數，加入亂數初始球的座標位置，以及考量初始球移動的角度來增加，多樣性的樣本數。
-  在rule base中，在回擊球後將托盤移動正中央，在球落下到一定高度時再去計算落下來的托盤位置。
-## KNN訓練架構圖
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
-## Rule_Base簡易流程
+
+## break down
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E8%A8%AD%E8%A8%88BreakDown.png) 
+## rule base流程
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_%E6%B5%81%E7%A8%8B.png)
-## KNN簡易流程
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_Knn%E6%B5%81%E7%A8%8B.png)
-## 球座標1000Frame
+## rule base球落點計算
+ 2P擊球回來且球往右跑	
+當球X座標>60，則最後落點X-60(彈兩次模式)
+當球X座標<=60，則最後落點60-X(彈一次模式)
+
+2P擊球回來且球往左跑	
+當球X<140，則最後落點X+60(兩次彈模式)
+當球X>=140，則球會因為變成一次彈模式，最後球落點分別為:
+140為200(+60)
+150為190(+40)
+160為180(+20)
+170為170(+0)
+180為160(-20)
+190為150(-40)
+200為兩次模式140(變相變成球往右邊模式)(-60)
+
+## KNN
   ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/%E7%90%83%E5%BA%A7%E6%A8%991000Frame.JPG)
