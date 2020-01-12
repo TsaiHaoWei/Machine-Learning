@@ -14,12 +14,12 @@
   # 分析
    ## 1、功能模組 
   訓練模型程式 :利用機器學習訓練出一個有效的模型
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E5%8A%9F%E8%83%BD%E6%A8%A1%E7%B5%84%E4%B8%80.png) 
 執行模型程式
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E5%8A%9F%E8%83%BD%E6%A8%A1%E7%B5%842.png) 
      
  ## 2、遊戲分析
-   ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
+   ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E9%81%8A%E6%88%B2%E5%88%86%E6%9E%901.png) 
     紅色為1P，藍色為2P。
     1P的Y座標為420，2P的Y座標為80
     物件速度:
@@ -30,10 +30,21 @@
     2P發球的球起始位置:(75,100)
 
      
- ## 3、parameter 
-  
-   效能FPS
-   
+ ## 3、遊戲參數
+    ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/Hw3_%E6%9E%B6%E6%A7%8B%E5%9C%96.png) 
+ ## 4、實現方法
+   訓練方式:
+        使用KNN(K-nearest neighbors algorithm)完成
+        抓取相關特徵進行特徵學習
+
+   訓練資料來源:
+        使用Rule-base提供大量有效的樣本
+  ## 5、KNN
+   KNN演算法，全名叫K-nearest neighbors algorithm
+KNN屬於機器學習中的監督式學習(Supervised learning)，但是在KNN其實並沒有做training的動作
+在K近鄰分類算法中，對於預測的新樣本數據，將其與訓練樣本一一進行比較，找到最為相似的K個訓練樣本，並以這K個訓練樣本中出現最多的分類標籤作為最終新樣本數據的預測標籤。
+
+
  # 設計
   為了考量機器學習的樣本數，加入亂數初始球的座標位置，以及考量初始球移動的角度來增加，多樣性的樣本數。
   在rule base中，在回擊球後將托盤移動正中央，在球落下到一定高度時再去計算落下來的托盤位置。
