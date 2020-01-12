@@ -54,7 +54,7 @@ KNN屬於機器學習中的監督式學習(Supervised learning)，但是在KNN�
 ## break down
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E8%A8%AD%E8%A8%88BreakDown.png) 
 ## rule base流程
- ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/HW3_%E6%B5%81%E7%A8%8B.png)
+ ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/RuleBase%E6%B5%81%E7%A8%8B.png)
 ## rule base球落點計算
  2P擊球回來且球往右跑	
 當球X座標>60，則最後落點X-60(彈兩次模式)
@@ -72,4 +72,4 @@ KNN屬於機器學習中的監督式學習(Supervised learning)，但是在KNN�
 200為兩次模式140(變相變成球往右邊模式)(-60)
 
 ## KNN
-  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Hw3/%E7%90%83%E5%BA%A7%E6%A8%991000Frame.JPG)
+  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/KNN%E6%9E%B6%E6%A7%8B.png)
