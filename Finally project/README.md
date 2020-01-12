@@ -14,8 +14,11 @@
   # 分析
    ## 1、功能模組 
   訓練模型程式 :利用機器學習訓練出一個有效的模型
+
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E5%8A%9F%E8%83%BD%E6%A8%A1%E7%B5%84%E4%B8%80.png) 
+
 執行模型程式
+
  ![image](https://github.com/TsaiHaoWei/Machine-Learning/blob/master/Finally%20project/%E5%8A%9F%E8%83%BD%E6%A8%A1%E7%B5%842.png) 
      
  ## 2、遊戲分析
